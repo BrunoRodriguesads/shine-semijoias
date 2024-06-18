@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politicas</title>
+    <link rel="stylesheet" href="Style/globals.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="header-inner-content">
+            <div class="nav-icon-container">
+                <img src="imagens/WhatsApp Image 2024-05-27 at 21.24.18.jpeg"
+                style="height: 35px; width: 35px;">
+            <h1 class="logo">SHINE<spam> SEMIJOIAS</spam></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="produtos.html" style="color: #A68D34;">Início</a></li>
+
+                    <li><a href="produtos.html" style="color: #A68D34;">Produtos</a></li>
+
+                    <li><a href="sobre-nos.html" style="color: #A68D34">Sobre</a></li>
+
+                    <li><a href="contato.html" style="color: #A68D34">Contato</a></li>
+
+                    <li><a href="pag-login.html" style="color: #A68D34;">Conta</a></li>
+                </ul>
+            </nav>
+            <div class="nav-icon-container">
+                <img src="imagens/cart.png">
+                <img src="imagens/menu.png" class="menu-button">
+            </div>
+    </div>
+    </div>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login Shine Semijoias</h2>
+        <form action="login_process.php" method="post">
+            <div class="input-group">
+                <label for="username">Nome de Usuário</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Entrar</button>
+            <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se aqui</a></p>
+        </form>
+    </div>
+
+    <footer class="gray-background rodapé">
+        <div class="page-inner-content footer-content">
+            <div class="logo-footer">
+                <h1 class="logo">SHINE<spam> SEMIJOIAS</spam></h1>
+                <p>"Shine Semijoias: Transformando Simplicidade em Elegância, Para que Você Brilhe em Cada Momento"
+                </p>
+            </div>
+    
+    <div>
+            <div class="links-footer">
+                <h4>INSTITUCIONAL</h4>
+                <ul>
+                    <li><a href="sobre-nos.html">Sobre nós</a></li>
+                    <li><a href="politicas.html">Política de privacidade</a></li>
+                    <li><a href="trocas-devolucao.html">Trocas e Devoluções</a></li>
+                </ul>
+                </div>
+                </div>
+        </div>
+    
+        <hr class="page-inner-content"/>
+    
+        <div class="page-inner-content copyright">
+            <p>copyright 2024 - Todos direitos reservados</p>
+        </div>
+    </footer>
+    
+    
+    </main>
+    
+    <script>
+        const navbar = document.querySelector(".navbar")
+        const menuButton = document.querySelector(".menu-button")
+    
+        menuButton.addEventListener('click', () => {
+            navbar.classList.toggle("show-menu");
+        });
+    </script>
+    
+</body>
+</html>

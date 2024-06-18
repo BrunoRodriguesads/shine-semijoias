@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shine Semijoias</title>
+    <link rel="stylesheet" href="style/globals.css">
+</head>
+
+<body>
+    
+    <div class="navbar">
+        <div class="header-inner-content">
+            <div class="nav-icon-container">
+                <img src="imagens/WhatsApp Image 2024-05-27 at 21.24.18.jpeg"
+                style="height: 35px; width: 35px;">
+            <h1 class="logo">SHINE<spam> SEMIJOIAS</spam></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" style="color: #A68D34;">Início</a></li>
+                    <li><a href="produtos.html" style="color: #A68D34;">Produtos</a></li>
+                    <li><a href="sobre-nos.html" style="color: #A68D34">Sobre</a></li>
+                    <li>Contato</li>
+                    <li><a href="pag-login.html" style="color: #A68D34;">Conta</a></li>
+                </ul>
+            </nav>
+            <div class="nav-icon-container">
+                <img src="imagens/cart.png">
+                <img src="imagens/menu.png" class="menu-button">
+            </div>
+    </div>
+    </div>
+<body class="=body-car">
+
+    <div class="cart-container">
+        <h2>Seu Carrinho de Compras</h2>
+        <div id="cart-items">
+            <!-- Itens do carrinho serão adicionados dinamicamente aqui -->
+        </div>
+        <button onclick="checkout()">Finalizar Compra</button>
+    </div>
+
+    <script>
+        function updateCart() {
+            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            const cartItemsContainer = document.getElementById('cart-items');
+            const totalPriceElement = document.getElementById('total-price');
+            let totalPrice = 0;
+            
+            cartItemsContainer.innerHTML = '';
+
+            cartItems.forEach(item => {
+                const itemElement = document.createElement('div');
+                itemElement.innerHTML = `
+                    <div>
+                        <img src="${item.image}" alt="${item.name}" style="width: 100px; height: 100px;">
+                        <p>${item.name}</p>
+                        <p>R$ ${item.price.toFixed(2)}</p>
+                    </div>
+                `;
+                cartItemsContainer.appendChild(itemElement);
+                totalPrice += item.price;
+            });
+
+            totalPriceElement.textContent = totalPrice.toFixed(2);
+        }
+
+        function checkout() {
+            alert('Compra finalizada com sucesso!');
+            localStorage.removeItem('cartItems');
+            updateCart();
+        }
+
+        document.addEventListener('DOMContentLoaded', updateCart);
+    </script>
+
+
+
+<div class="container">
+    <link rel="stylesheet" href="pagamen.css">
+    <div class="cartao-container">
+
+        <div class="frente">
+            <div class="imagem">
+                <img src="imag pagam/chip.png" alt="">
+                <img src="imag pagam/visa.png" alt="">
+            </div>
+            <div class="numero-cartao">################</div>
+            <div class="flexbox">
+                <div class="caixa">
+                    <span>titular do cartão</span>
+                    <div class="nome-titular-cartao">nome completo</div>
+                </div>
+                <div class="caixa">
+                    <span>expira</span>
+                    <div class="expiracao">
+                        <span class="exp-mes">mm</span>
+                        <span class="exp-ano">aa</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tras">
+            <div class="faixa"></div>
+            <div class="caixa">
+                <span>cvv</span>
+                <div class="caixa-cvv"></div>
+                <img src="imag pagam/visa.png" alt="">
+            </div>
+        </div>
+
+    </div>
+
+    <form action="">
+        <div class="inputBox">
+            <span>número do cartão</span>
+            <input type="text" maxlength="16" class="input-numero-cartao">
+        </div>
+        <div class="inputBox">
+            <span>titular do cartão</span>
+            <input type="text" class="input-titular-cartao">
+        </div>
+        <div class="flexbox">
+            <div class="inputBox">
+                <span>expiração mm</span>
+                <select name="" id="" class="input-mes">
+                    <option value="mes" selected disabled>mês</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+            </div>
+            <div class="inputBox">
+                <span>expiração aa</span>
+                <select name="" id="" class="input-ano">
+                    <option value="ano" selected disabled>ano</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                    <option value="2029">2029</option>
+                    <option value="2030">2030</option>
+                </select>
+            </div>
+            <div class="inputBox">
+                <span>cvv</span>
+                <input type="text" maxlength="4" class="input-cvv">
+            </div>
+        </div>
+    </form>
+
+</div>    
+
+<script>
+
+document.querySelector('.input-numero-cartao').oninput = () =>{
+    document.querySelector('.numero-cartao').innerText = document.querySelector('.input-numero-cartao').value;
+}
+
+document.querySelector('.input-titular-cartao').oninput = () =>{
+    document.querySelector('.nome-titular-cartao').innerText = document.querySelector('.input-titular-cartao').value;
+}
+
+document.querySelector('.input-mes').oninput = () =>{
+    document.querySelector('.exp-mes').innerText = document.querySelector('.input-mes').value;
+}
+
+document.querySelector('.input-ano').oninput = () =>{
+    document.querySelector('.exp-ano').innerText = document.querySelector('.input-ano').value;
+}
+
+document.querySelector('.input-cvv').onmouseenter = () =>{
+    document.querySelector('.frente').style.transform = 'perspective(1000px) rotateY(-180deg)';
+    document.querySelector('.tras').style.transform = 'perspective(1000px) rotateY(0deg)';
+}
+
+document.querySelector('.input-cvv').onmouseleave = () =>{
+    document.querySelector('.frente').style.transform = 'perspective(1000px) rotateY(0deg)';
+    document.querySelector('.tras').style.transform = 'perspective(1000px) rotateY(180deg)';
+}
+
+document.querySelector('.input-cvv').oninput = () =>{
+    document.querySelector('.caixa-cvv').innerText = document.querySelector('.input-cvv').value;
+}
+
+</script>
+
+
+    
+    <footer class="gray-background rodapé">
+        <div class="page-inner-content footer-content">
+            <div class="logo-footer">
+                <h1 class="logo">SHINE<spam> SEMIJOIAS</spam></h1>
+                <p>"Shine Semijoias: Transformando Simplicidade em Elegância, Para que Você Brilhe em Cada Momento"
+                </p>
+            </div>
+    
+    <div>
+            <div class="links-footer">
+                <h4>INSTITUCIONAL</h4>
+                <ul>
+                    <li><a href="sobre-nos.html">Sobre nós</a></li>
+                    <li><a href="politicas.html">Política de privacidade</a></li>
+                    <li><a href="trocas-devolucao.html">Trocas e Devoluções</a></li>
+                </ul>
+                </div>
+                </div>
+        </div>
+    
+        <hr class="page-inner-content"/>
+    
+        <div class="page-inner-content copyright">
+            <p>copyright 2024 - Todos direitos reservados</p>
+        </div>
+    </footer>
+
+</body>
+</html>

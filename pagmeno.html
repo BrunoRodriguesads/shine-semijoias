@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- link do arquivo css personalizado -->
+    <link rel="stylesheet" href="pagamen.css">
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="cartao-container">
+
+        <div class="frente">
+            <div class="imagem">
+                <img src="imag pagam/chip.png" alt="">
+                <img src="imag pagam/visa.png" alt="">
+            </div>
+            <div class="numero-cartao">################</div>
+            <div class="flexbox">
+                <div class="caixa">
+                    <span>titular do cartão</span>
+                    <div class="nome-titular-cartao">nome completo</div>
+                </div>
+                <div class="caixa">
+                    <span>expira</span>
+                    <div class="expiracao">
+                        <span class="exp-mes">mm</span>
+                        <span class="exp-ano">aa</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tras">
+            <div class="faixa"></div>
+            <div class="caixa">
+                <span>cvv</span>
+                <div class="caixa-cvv"></div>
+                <img src="imag pagam/visa.png" alt="">
+            </div>
+        </div>
+
+    </div>
+
+    <form action="">
+        <div class="inputBox">
+            <span>número do cartão</span>
+            <input type="text" maxlength="16" class="input-numero-cartao">
+        </div>
+        <div class="inputBox">
+            <span>titular do cartão</span>
+            <input type="text" class="input-titular-cartao">
+        </div>
+        <div class="flexbox">
+            <div class="inputBox">
+                <span>expiração mm</span>
+                <select name="" id="" class="input-mes">
+                    <option value="mes" selected disabled>mês</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+            </div>
+            <div class="inputBox">
+                <span>expiração aa</span>
+                <select name="" id="" class="input-ano">
+                    <option value="ano" selected disabled>ano</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                    <option value="2029">2029</option>
+                    <option value="2030">2030</option>
+                </select>
+            </div>
+            <div class="inputBox">
+                <span>cvv</span>
+                <input type="text" maxlength="4" class="input-cvv">
+            </div>
+        </div>
+        <input type="submit" value="enviar" class="btn-enviar">
+    </form>
+
+</div>    
+
+<script>
+
+document.querySelector('.input-numero-cartao').oninput = () =>{
+    document.querySelector('.numero-cartao').innerText = document.querySelector('.input-numero-cartao').value;
+}
+
+document.querySelector('.input-titular-cartao').oninput = () =>{
+    document.querySelector('.nome-titular-cartao').innerText = document.querySelector('.input-titular-cartao').value;
+}
+
+document.querySelector('.input-mes').oninput = () =>{
+    document.querySelector('.exp-mes').innerText = document.querySelector('.input-mes').value;
+}
+
+document.querySelector('.input-ano').oninput = () =>{
+    document.querySelector('.exp-ano').innerText = document.querySelector('.input-ano').value;
+}
+
+document.querySelector('.input-cvv').onmouseenter = () =>{
+    document.querySelector('.frente').style.transform = 'perspective(1000px) rotateY(-180deg)';
+    document.querySelector('.tras').style.transform = 'perspective(1000px) rotateY(0deg)';
+}
+
+document.querySelector('.input-cvv').onmouseleave = () =>{
+    document.querySelector('.frente').style.transform = 'perspective(1000px) rotateY(0deg)';
+    document.querySelector('.tras').style.transform = 'perspective(1000px) rotateY(180deg)';
+}
+
+document.querySelector('.input-cvv').oninput = () =>{
+    document.querySelector('.caixa-cvv').innerText = document.querySelector('.input-cvv').value;
+}
+
+</script>
+
+</body>
+</html>

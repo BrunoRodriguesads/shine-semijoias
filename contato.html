@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shine Semijoias</title>
+    <link rel="stylesheet" href="style/globals.css">
+</head>
+
+<body>
+    
+    <div class="navbar">
+        <div class="header-inner-content">
+            <div class="nav-icon-container">
+                <img src="imagens/WhatsApp Image 2024-05-27 at 21.24.18.jpeg"
+                style="height: 35px; width: 35px;">
+            <h1 class="logo">SHINE<spam> SEMIJOIAS</spam></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" style="color: #A68D34;">Início</a></li>
+
+                    <li><a href="produtos.html" style="color: #A68D34;">Produtos</a></li>
+
+                    <li><a href="sobre-nos.html" style="color: #A68D34">Sobre</a></li>
+
+                    <li><a href="contato.html" style="color: #A68D34">Contato</a></li>
+
+                    <li><a href="pag-login.html" style="color: #A68D34;">Conta</a></li>
+                </ul>
+            </nav>
+            <div class="nav-icon-container">
+                <a href="carrinho.html"><img src="imagens/cart.png"></a>
+                <img src="imagens/menu.png" class="menu-button">
+            </div>
+    </div>
+    </div>
+
+<body>
+    <header class="contato">
+        <h1>Entre em Contato</h1>
+    </header>
+    <main>
+        <section class="info-cont">
+            <h2>Informações de Contato</h2>
+            <ul>
+                <li><strong>Telefone:</strong> (11) 94260-6793</li>
+                <li><strong>Email:</strong> contato@shine.semijoias.com</li>
+                <li><strong>Endereço:</strong> R. Devaldo José Sales - Sapopemba - 03925075</li>
+            </ul>
+        </section>
+        <section class="form">
+            <h2>Formulário de Contato</h2>
+            <form action="#" method="POST">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </section>
+    </main>
+    
+
+    <footer class="gray-background rodapé">
+    <div class="page-inner-content footer-content">
+        <div class="logo-footer">
+            <h1 class="logo">SHINE<spam> SEMIJOIAS</spam></h1>
+            <p>"Shine Semijoias: Transformando Simplicidade em Elegância, Para que Você Brilhe em Cada Momento"
+            </p>
+        </div>
+
+<div>
+        <div class="links-footer">
+            <h4>INSTITUCIONAL</h4>
+            <ul>
+                <li><a href="sobre-nos.html">Sobre nós</a></li>
+                <li><a href="politicas.html">Política de privacidade</a></li>
+                <li><a href="trocas-devolucao.html">Trocas e Devoluções</a></li>
+            </ul>
+            </div>
+            </div>
+    </div>
+
+    <hr class="page-inner-content"/>
+
+    <div class="page-inner-content copyright">
+        <p>copyright 2024 - Todos direitos reservados</p>
+    </div>
+</footer>
+
+<hr class="page-inner-content"/>
+
+<div class="page-inner-content copyright">
+    <p>copyright 2024 - Todos direitos reservados</p>
+</div>
+
+<script>
+    const navbar = document.querySelector(".navbar")
+    const menuButton = document.querySelector(".menu-button")
+
+    menuButton.addEventListener('click', () => {
+        navbar.classList.toggle("show-menu");
+    });
+</script>
+</body>
+</html>
